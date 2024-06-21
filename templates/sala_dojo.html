@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levantamento de Requisitos</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <section>
+        <div class="d-flex">
+            <img class="inicio" src="../static/img/sala_dojo.png" alt="Início do site. Bem-vindo!">
+            <a href="/"><img class="mapa" src="../static/img/mapa.png" alt="Mapa"></a>
+            <form action="/sala_dojo" method="post">
+                <label for="escolha">Escolha pedra, papel, tesoura, lagarto ou spock</label>
+                <select id="escolha" name="escolha">
+                    <option value="PEDRA">PEDRA</option>
+                    <option value="PAPEL">PAPEL</option>
+                    <option value="TESOURA">TESOURA</option>
+                    <option value="LAGARTO">LAGARTO</option>
+                    <option value="SPOCK">SPOCK</option>
+                </select>
+                <button type="submit">Escolha</button>
+                {% if mensagem %}
+                {{mensagem}}
+                {% endif %}
+
+                {% if pontos %}
+                {{pontos}}
+                {% endif %}
+            </form>
+        </div>
+        <a href="/local3"><div class="entrada8"> </div></a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+:root {
+    --azul: #0273B7;
+}
+.inicio {
+    width: 2000px;
+}
+.azul {
+    background-color: var(--azul);
+}
+main {
+    height: 100vh;
+}
+.aviso {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.d-flex {
+    display: flex;
+}
+.mapa {
+    position: fixed;
+    bottom: 0;
+    left: 0     ;
+}
+.position_button {
+    left: 60vw;
+    bottom: 40vh;
+}
+.p-absolute{
+    position: absolute;
+}
+.btn_escondido {
+    background-color: white;
+    color: white;
+    border: none;
+}
+/* LOCAIS */
+.local1 {
+    position: absolute;
+    top: 320px;
+    left: 820px;
+    height: 80px;
+    width: 170px;
+}
+.local1:hover {
+    border: 10px white solid;
+}
+.local2 {
+    position: absolute;
+    left: 330px;
+    bottom: 100px;
+    height: 100px;
+    width: 230px;
+}
+.local2:hover {
+    border: 10px white solid;
+}
+.local3 {
+    position: absolute;
+    left: 670px;
+    bottom: 350px;
+    height: 70px;
+    width: 100px;
+}
+.local3:hover {
+    border: 10px white solid;
+}
+.local4 {
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+    height: 140px;
+    width: 70px;
+}
+.local4:hover {
+    border: 10px white solid;
+}
+.local5 {
+    position: absolute;
+    left: 150px;
+    bottom: 220px;
+    height: 200px;
+    width: 200px;
+}
+.local5:hover {
+    border: 10px white solid;
+}
+.local6 {
+    position: absolute;
+    left: 680px;
+    bottom: 100px;
+    height: 100px;
+    width: 200px;
+}
+.local6:hover {
+    border: 10px white solid;
+}
+.local7 {
+    position: absolute;
+    left: 960px;
+    bottom: 40px;
+    height: 100px;
+    width: 190px;
+}
+.local7:hover {
+    border: 10px white solid;
+}
+.local_secreto {
+    position: absolute;
+    left: 1090px;
+    bottom: 250px;
+    height: 50px;
+    width: 100px;
+}
+.entrada1 {
+    position: absolute;
+    left: 270px;
+    bottom: 320px;
+    height: 120px;
+    width: 100px;
+}
+.entrada2 {
+    position: absolute;
+    left: 210px;
+    bottom: 500px;
+    height: 120px;
+    width: 100px;
+}
+.entrada3 {
+    position: absolute;
+    left: 150px;
+    bottom: 320px;
+    height: 120px;
+    width: 100px;
+}
+.inicio1 {
+    width: 2000px;
+    height: 100vh;
+}
+.entrada4 {
+    position: absolute;
+    left: 1150px;
+    bottom: 550px;
+    height: 70px;
+    width: 70px; 
+}
+.entrada5 {
+    position: absolute;
+    left: 100px;
+    bottom: 80px;
+    height: 150px;
+    width: 100px; 
+}
+.entrada6 {
+    position: absolute;
+    left: 320px;
+    bottom: 230px;
+    height: 150px;
+    width: 100px;
+}
+.entrada7 {
+    position: absolute;
+    left: 1000px;
+    bottom: 120px;
+    height: 150px;
+    width: 100px;
+}
+.entrada8 {
+    position: absolute;
+    left: 350px;
+    bottom: -150px;
+    height: 50px;
+    width: 500px;
+}
+.entrada9 {
+    position: absolute;
+    left: 570px;
+    bottom: 150px;
+    height: 100px;
+    width: 100px;
+}
+/* TEXTOS */
+.texto1 {
+    position: absolute;
+    background-color: gold;
+    left: 553px;
+    bottom: 325px;
+    height: 50px;
+    width: 100px;
+    animation-name: pisca;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    border-radius: 30px;
+}
+.texto2 {
+    position: absolute;
+    background-color: gold;
+    left: 400px;
+    bottom: 460px;
+    height: 50px;
+    width: 40px;
+    animation-name: pisca;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    border-radius: 30px;
+}
+.link {
+    color: transparent;
+    position: absolute;
+    left: 900px;
+    top: 140px;
+    animation-name: pisca;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    border-radius: 30px;
+}
+
+
+.p-texto{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100vh;
+    width: 500px;
+    background-color: white;
+}
+.p-texto p{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: "Playwrite NZ", cursive;
+}
+.assinatura {
+    margin-left: 80%;
+}
+
+
+/* ANIMAÇÃO */
+@keyframes pisca {
+    0% {
+        background-color: rgba(255, 217, 0, 0.457);
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgba(255, 217, 0, 0.457);
+    }
+}
+
+
+.X {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
