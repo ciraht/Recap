@@ -17,32 +17,27 @@ def jogo():
     LAGARTO = "LAGARTO"
     SPOCK = "SPOCK"
     opcoes = [PEDRA, PAPEL, TESOURA, LAGARTO, SPOCK]
-    pontos_ia = 0
-    pontos_jogador = 0
     mensagem = ''
-    pontos = ''
     escolha = request.form['escolha']
 
-    while True:
-        IA_escolha = (random.choice(opcoes))
-        IA.clear()
-        IA.append(IA_escolha)
+    # while True:
+    IA_escolha = (random.choice(opcoes))
+    IA.clear()
+    IA.append(IA_escolha)
 
-        if escolha.upper() == IA[0]:
-            mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Empatou'
-            pontos = 'Pontuação' f'\nIA: {pontos_ia}' f'\nVocê: {pontos_jogador}'
-        elif escolha.upper() == 'TESOURA' and IA[0] == 'PAPEL' or escolha.upper() == 'PAPEL' and IA[0] == 'PEDRA' or escolha.upper() == 'PEDRA' and IA[0] == 'LAGARTO' or escolha.upper() == 'LAGARTO' and IA[0] == 'SPOCK' or escolha.upper() == 'SPOCK' and IA[0] == 'TESOURA' or escolha.upper() == 'TESOURA' and IA[0] == 'LAGARTO' or escolha.upper() == 'LAGARTO' and IA[0] == 'PAPEL' or escolha.upper() == 'PAPEL' and IA[0] == 'SPOCK' or escolha.upper() == 'SPOCK' and IA[0] == 'PEDRA' or escolha.upper() == 'PEDRA' and IA[0] == 'TESOURA':
-            mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Você ganhou!'
-            pontos_jogador += 1
-            pontos = 'Pontuação' f'\nIA: {pontos_ia}' f'\nVocê: {pontos_jogador}'
-        else:
-            mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Você perdeu...'
-            pontos_ia += 1
-            pontos = 'Pontuação' f'\nIA: {pontos_ia}' f'\nVocê: {pontos_jogador}'
-        escolha = None
+    if escolha.upper() == IA[0]:
+        mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Empatou'
+
+    elif escolha.upper() == 'TESOURA' and IA[0] == 'PAPEL' or escolha.upper() == 'PAPEL' and IA[0] == 'PEDRA' or escolha.upper() == 'PEDRA' and IA[0] == 'LAGARTO' or escolha.upper() == 'LAGARTO' and IA[0] == 'SPOCK' or escolha.upper() == 'SPOCK' and IA[0] == 'TESOURA' or escolha.upper() == 'TESOURA' and IA[0] == 'LAGARTO' or escolha.upper() == 'LAGARTO' and IA[0] == 'PAPEL' or escolha.upper() == 'PAPEL' and IA[0] == 'SPOCK' or escolha.upper() == 'SPOCK' and IA[0] == 'PEDRA' or escolha.upper() == 'PEDRA' and IA[0] == 'TESOURA':
+        mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Você ganhou!'
+
+    else:
+        mensagem = f'A I.A. escolheu {IA[0]}, e você escolheu {escolha}. Você perdeu...'
+
+    escolha = None
 
 
-    return render_template('sala_dojo.html', mensagem=mensagem, pontos=pontos)
+    return render_template('sala_dojo.html', mensagem=mensagem)
 
 
 @app.route('/')
