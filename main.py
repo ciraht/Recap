@@ -80,6 +80,9 @@ def binoculo():
 @app.route('/farol_baixoTEXTO')
 def farol_baixoTEXTO():
     return render_template('farol_baixoTEXTO.html')
+@app.route('/praiaTEXTO')
+def praiaTEXTO():
+    return render_template('praiaTEXTO.html')
 
 @app.route('/montanhaTEXTO')
 def montanhaTEXTO():

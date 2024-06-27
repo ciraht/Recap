@@ -231,6 +231,18 @@ main {
     animation-duration: 3s;
     border-radius: 30px;
 }
+.texto3 {
+    position: absolute;
+    background-color: gold;
+    left: 800px;
+    bottom: 380px;
+    height: 50px;
+    width: 40px;
+    animation-name: pisca;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    border-radius: 30px;
+}
 .link {
     color: transparent;
     position: absolute;
@@ -262,6 +274,9 @@ main {
 }
 .borda-verde {
     border: #30c42c solid 15px;
+}
+.borda-azul{
+    border: #40c4f4 solid 15px;
 }
 
 
