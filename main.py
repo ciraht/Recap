@@ -96,6 +96,9 @@ def sala_dojo():
 @app.route('/jato')
 def jato():
     return render_template('jato.html')
+@app.route('/descer')
+def descer():
+    return render_template('descer.html')
 @app.route('/incrementar', methods=['POST'])
 def incrementar():
     global contador_cliques
